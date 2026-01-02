@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand Colors */
+  --primary-yellow: #f3d34a;
+  --light-yellow: #f3e37c;
+  --pale-yellow: #f2e5a2;
+
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary-yellow);
+  --color-primary-light: var(--light-yellow);
+  --color-primary-pale: var(--pale-yellow);
+
+  --font-display: var(--font-bebas);
+  --font-sans: var(--font-montserrat);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-montserrat), sans-serif;
+  /* Updated font-family */
+}
+
+.font-display {
+  font-family: var(--font-bebas), sans-serif;
+}
+
+.font-sans {
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+/* Accessibility: Skip Navigation Link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #FFD700;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 9999;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Accessibility: Enhanced Focus Indicators */
+*:focus-visible {
+  outline: 3px solid var(--primary);
+  /* Using the new --primary variable */
+  outline-offset: 2px;
+}
+
+/* Accessibility: Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Accessibility: Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
