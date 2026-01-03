@@ -73,26 +73,14 @@ export default function SurfaceProtectionPage() {
                     <div className="lg:col-span-1">
                         <div className="bg-gray-50 p-8 rounded-xl border border-gray-200 sticky top-24">
                             <h3 className="font-display text-2xl font-bold mb-6 text-gray-900">Application Methods</h3>
-                            <ul className="space-y-4 text-gray-700 mb-8">
+                            <ul className="space-y-4 text-gray-700">
                                 <li className="pb-4 border-b border-gray-200">Cold Bonding</li>
                                 <li className="pb-4 border-b border-gray-200">Hot Vulcanization</li>
                                 <li className="pb-4 border-b border-gray-200">Spray-Applied Coatings</li>
-                                <li className="pb-4 border-b border-gray-200">Industrial Surface Preparation</li>
+                                <li className="pb-4">Industrial Surface Preparation</li>
                             </ul>
-
-                            <div className="bg-primary p-6 rounded-lg text-center">
-                                <h4 className="font-display text-xl font-bold mb-2">Get a Quote</h4>
-                                <p className="text-sm mb-4">Protect your assets from wear and tear today.</p>
-                                <Link
-                                    href="/contact"
-                                    className="inline-block w-full bg-black text-white font-bold py-3 uppercase text-sm tracking-wider hover:bg-white hover:text-black transition-colors"
-                                >
-                                    Contact Us
-                                </Link>
-                            </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </main>

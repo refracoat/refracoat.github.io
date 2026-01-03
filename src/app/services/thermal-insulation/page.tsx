@@ -67,23 +67,12 @@ export default function ThermalInsulationPage() {
                     <div className="lg:col-span-1">
                         <div className="bg-gray-50 p-8 rounded-xl border border-gray-200 sticky top-24">
                             <h3 className="font-display text-2xl font-bold mb-6 text-gray-900">Engineering Capabilities</h3>
-                            <ul className="space-y-4 text-gray-700 mb-8">
+                            <ul className="space-y-4 text-gray-700">
                                 <li className="pb-4 border-b border-gray-200">Engineering & Design Support</li>
                                 <li className="pb-4 border-b border-gray-200">Heat Loss Calculations</li>
                                 <li className="pb-4 border-b border-gray-200">Material Selection Consultation</li>
-                                <li className="pb-4 border-b border-gray-200">Certified Installation Methods</li>
+                                <li className="pb-4">Certified Installation Methods</li>
                             </ul>
-
-                            <div className="bg-primary p-6 rounded-lg text-center">
-                                <h4 className="font-display text-xl font-bold mb-2">Need a Consultation?</h4>
-                                <p className="text-sm mb-4">Contact our engineering team to discuss your project requirements.</p>
-                                <Link
-                                    href="/contact"
-                                    className="inline-block w-full bg-black text-white font-bold py-3 uppercase text-sm tracking-wider hover:bg-white hover:text-black transition-colors"
-                                >
-                                    Contact Us
-                                </Link>
-                            </div>
                         </div>
                     </div>
 
