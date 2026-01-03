@@ -1,4 +1,6 @@
+"use client";
 import Hero from "@/components/Hero";
+import LogoCarousel from "@/components/LogoCarousel";
 import ServiceCard from "@/components/ServiceCard";
 import Link from "next/link";
 
@@ -7,11 +9,42 @@ import PageWrapper from "@/components/animations/PageWrapper";
 import FadeIn from "@/components/animations/FadeIn";
 import StaggerContainer, { staggerItem } from "@/components/animations/StaggerContainer";
 import SlideIn from "@/components/animations/SlideIn";
+import { useState } from "react";
+import Modal from "@/components/Modal";
+
+interface ServiceDetail {
+  title: string;
+  summary: string;
+}
 
 export default function Home() {
+  const [selectedService, setSelectedService] = useState<ServiceDetail | null>(null);
+
   const industries = [
     "Chemical", "Oil & Gas", "Mining", "Cement", "Steel", "Energy"
   ];
+
+  const servicesData: Record<string, ServiceDetail> = {
+    "Thermal Insulation": {
+      title: "Thermal Insulation",
+      summary: "Our thermal insulation services focus on the professional installation, maintenance, and repair of refractory linings. Proper insulation is critical for reducing heat loss, improving energy efficiency, and ensuring the safety of your facility and personnel."
+    },
+    "Surface Protection": {
+      title: "Surface Protection",
+      summary: "Our surface protection solutions utilize high-performance rubber linings and coatings to extend the lifespan of your equipment. We protect against severe abrasion, chemical corrosion, and heavy impact, ensuring operational continuity in harsh environments."
+    },
+    "Conveyor Systems": {
+      title: "Conveyor Systems",
+      summary: "We specialize in engineering conveyor systems that withstand extreme conditions, from high heat to heavy abrasion. Our focus is on durability, reliability, and minimal maintenance to keep your material handling operations running smoothly."
+    }
+  };
+
+  const handleOpenService = (title: string) => {
+    const service = servicesData[title];
+    if (service) {
+      setSelectedService(service);
+    }
+  };
 
   return (
     <PageWrapper className="flex min-h-screen flex-col">
@@ -24,6 +57,8 @@ export default function Home() {
         centered={true}
         variant="primary"
       />
+
+      <LogoCarousel />
 
       {/* Services Section */}
       <section className="py-24 bg-white">
@@ -43,17 +78,17 @@ export default function Home() {
             <ServiceCard
               title="Thermal Insulation"
               description="Expert installation, maintenance, and repair of refractory linings for kilns, furnaces, and high-temperature vessels."
-              link="/services/thermal-insulation"
+              onClick={() => handleOpenService("Thermal Insulation")}
             />
             <ServiceCard
               title="Surface Protection"
               description="Advanced rubber linings and protective coatings to prevent corrosion and abrasion in harsh industrial applications."
-              link="/services/surface-protection"
+              onClick={() => handleOpenService("Surface Protection")}
             />
             <ServiceCard
               title="Conveyor Systems"
               description="Custom design and installation of special conveyor systems optimized for material handling in extreme conditions."
-              link="/services/conveyor-systems"
+              onClick={() => handleOpenService("Conveyor Systems")}
             />
           </div>
         </div>
@@ -134,6 +169,14 @@ export default function Home() {
           </FadeIn>
         </div>
       </section>
+
+      <Modal
+        isOpen={!!selectedService}
+        onClose={() => setSelectedService(null)}
+        title={selectedService?.title || ""}
+      >
+        <p>{selectedService?.summary}</p>
+      </Modal>
     </PageWrapper>
   );
 }

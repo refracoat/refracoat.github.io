@@ -25,7 +25,7 @@ export default function TermsOfServicePage() {
             <section className="mb-12">
               <h2 className="font-display text-3xl font-bold mb-6 text-gray-900">Agreement to Terms</h2>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                These Terms of Service ("Terms") constitute a legally binding agreement between you ("User," "you," or "your") and Refracoat ("Company," "we," "us," or "our") regarding your access to and use of our website located at www.refracoat.com (the "Website") and our services (collectively, the "Services").
+                These Terms of Service (&quot;Terms&quot;) constitute a legally binding agreement between you (&quot;User,&quot; &quot;you,&quot; or &quot;your&quot;) and Refracoat (&quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) regarding your access to and use of our website located at www.refracoat.com (the &quot;Website&quot;) and our services (collectively, the &quot;Services&quot;).
               </p>
               <p className="text-gray-700 mb-4 leading-relaxed">
                 By accessing or using our Website or Services, you agree to be bound by these Terms. If you do not agree to these Terms, you must not access or use our Website or Services. These Terms apply to all visitors, users, and others who access or use the Website or Services.
@@ -34,7 +34,7 @@ export default function TermsOfServicePage() {
 
             <section className="mb-12">
               <h2 className="font-display text-3xl font-bold mb-6 text-gray-900">Use of Website and Services</h2>
-              
+
               <h3 className="font-display text-2xl font-bold mb-4 text-gray-900 mt-8">Eligibility</h3>
               <p className="text-gray-700 mb-4 leading-relaxed">
                 You must be at least 18 years old and have the legal capacity to enter into contracts to use our Services. By using our Services, you represent and warrant that you meet these eligibility requirements.
@@ -57,7 +57,7 @@ export default function TermsOfServicePage() {
             <section className="mb-12">
               <h2 className="font-display text-3xl font-bold mb-6 text-gray-900">Intellectual Property Rights</h2>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                The Website and its original content, features, and functionality are owned by Refracoat and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws, including but not limited to Moroccan Law No. 2-00 on Copyright and Related Rights (Loi n° 2-00 relative aux droits d'auteur et droits voisins) and Law No. 17-97 on the Protection of Industrial Property (Loi n° 17-97 relative à la protection de la propriété industrielle). All trademarks, service marks, and trade names are proprietary to Refracoat or their respective owners.
+                The Website and its original content, features, and functionality are owned by Refracoat and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws, including but not limited to Moroccan Law No. 2-00 on Copyright and Related Rights (Loi n° 2-00 relative aux droits d&apos;auteur et droits voisins) and Law No. 17-97 on the Protection of Industrial Property (Loi n° 17-97 relative à la protection de la propriété industrielle). All trademarks, service marks, and trade names are proprietary to Refracoat or their respective owners.
               </p>
               <p className="text-gray-700 mb-4 leading-relaxed">
                 You may not modify, reproduce, distribute, create derivative works, publicly display, publicly perform, republish, download, store, or transmit any of the material on our Website without our prior written consent, except as follows:
@@ -71,7 +71,7 @@ export default function TermsOfServicePage() {
 
             <section className="mb-12">
               <h2 className="font-display text-3xl font-bold mb-6 text-gray-900">Service Agreements</h2>
-              
+
               <h3 className="font-display text-2xl font-bold mb-4 text-gray-900 mt-8">Quotations and Proposals</h3>
               <p className="text-gray-700 mb-4 leading-relaxed">
                 All quotations, proposals, and estimates provided by Refracoat constitute an offer (offre) under Moroccan contract law and are valid for the period specified in the quotation or, if no period is specified, for 30 days from the date of issue. Prices and specifications are subject to change without notice until a formal service agreement (contrat de prestation de services) is executed. Acceptance of a quotation must be made in writing to constitute a binding contract.
@@ -112,10 +112,10 @@ export default function TermsOfServicePage() {
 
             <section className="mb-12">
               <h2 className="font-display text-3xl font-bold mb-6 text-gray-900">Disclaimers and Limitations of Liability</h2>
-              
+
               <h3 className="font-display text-2xl font-bold mb-4 text-gray-900 mt-8">Website Disclaimer</h3>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                The information on this Website is provided on an "as is" and "as available" basis. We make no representations or warranties of any kind, express or implied, regarding:
+                The information on this Website is provided on an &quot;as is&quot; and &quot;as available&quot; basis. We make no representations or warranties of any kind, express or implied, regarding:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">
                 <li>The accuracy, completeness, or reliability of any information on the Website</li>
@@ -178,7 +178,7 @@ export default function TermsOfServicePage() {
             <section className="mb-12">
               <h2 className="font-display text-3xl font-bold mb-6 text-gray-900">Changes to Terms</h2>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
+                We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days&apos; notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
               </p>
               <p className="text-gray-700 mb-4 leading-relaxed">
                 By continuing to access or use our Website or Services after any revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, you must stop using the Website and Services.

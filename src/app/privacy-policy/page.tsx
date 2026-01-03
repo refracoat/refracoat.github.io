@@ -25,19 +25,19 @@ export default function PrivacyPolicyPage() {
             <section className="mb-12">
               <h2 className="font-display text-3xl font-bold mb-6 text-gray-900">Data Protection Statement</h2>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                Refracoat ("we," "our," or "us") acts as a data controller and is committed to protecting your privacy and personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our services, or interact with us. This policy complies with applicable data protection laws, including Law No. 09-08 relating to the protection of individuals with regard to the processing of personal data (Loi n° 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel), enacted on February 18, 2009, and enforced by the Commission Nationale de Contrôle de la Protection des Données à Caractère Personnel (CNDP).
+                Refracoat (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) acts as a data controller and is committed to protecting your privacy and personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our services, or interact with us. This policy complies with applicable data protection laws, including Law No. 09-08 relating to the protection of individuals with regard to the processing of personal data (Loi n° 09-08 relative à la protection des personnes physiques à l&apos;égard du traitement des données à caractère personnel), enacted on February 18, 2009, and enforced by the Commission Nationale de Contrôle de la Protection des Données à Caractère Personnel (CNDP).
               </p>
             </section>
 
             <section className="mb-12">
               <h2 className="font-display text-3xl font-bold mb-6 text-gray-900">Information Collection</h2>
-              
+
               <h3 className="font-display text-2xl font-bold mb-4 text-gray-900 mt-8">Categories of Personal Data Collected</h3>
               <p className="text-gray-700 mb-4 leading-relaxed">
                 In accordance with Law No. 09-08, we collect the following categories of personal data:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">
-                <li><strong>Identification Data:</strong> Name, email address, phone number, company name, and company identification number (ICE - Identifiant Commun de l'Entreprise)</li>
+                <li><strong>Identification Data:</strong> Name, email address, phone number, company name, and company identification number (ICE - Identifiant Commun de l&apos;Entreprise)</li>
                 <li><strong>Business and Professional Data:</strong> Company details, industry sector, project location, service requirements, and professional contact information</li>
                 <li><strong>Communication Data:</strong> Messages, project descriptions, specifications, and any files you upload through our contact forms</li>
                 <li><strong>Technical and Usage Data:</strong> IP address, browser type, device information, operating system, referral URLs, pages viewed, time spent on pages, and website usage data collected through cookies and analytics tools</li>
@@ -72,7 +72,7 @@ export default function PrivacyPolicyPage() {
 
             <section className="mb-12">
               <h2 className="font-display text-3xl font-bold mb-6 text-gray-900">Information Use</h2>
-              
+
               <h3 className="font-display text-2xl font-bold mb-4 text-gray-900 mt-8">How We Use Your Information</h3>
               <p className="text-gray-700 mb-4 leading-relaxed">
                 We use the collected information to:
@@ -113,7 +113,7 @@ export default function PrivacyPolicyPage() {
 
             <section className="mb-12">
               <h2 className="font-display text-3xl font-bold mb-6 text-gray-900">Data Security</h2>
-              
+
               <h3 className="font-display text-2xl font-bold mb-4 text-gray-900 mt-8">Technical and Organizational Security Measures</h3>
               <p className="text-gray-700 mb-4 leading-relaxed">
                 In accordance with Article 6 of Law No. 09-08, we implement appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. These measures include:
@@ -158,7 +158,7 @@ export default function PrivacyPolicyPage() {
 
             <section className="mb-12">
               <h2 className="font-display text-3xl font-bold mb-6 text-gray-900">Cookies and Tracking Technologies</h2>
-              
+
               <h3 className="font-display text-2xl font-bold mb-4 text-gray-900 mt-8">Cookie Usage</h3>
               <p className="text-gray-700 mb-4 leading-relaxed">
                 Our website may use cookies and similar tracking technologies to enhance your browsing experience, analyze website traffic, and understand user preferences. Cookies are small text files stored on your device when you visit our website.
@@ -173,7 +173,7 @@ export default function PrivacyPolicyPage() {
 
               <h3 className="font-display text-2xl font-bold mb-4 text-gray-900 mt-8">Managing Cookies</h3>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                You can control and manage cookies through your browser settings. Most browsers allow you to refuse or delete cookies. However, disabling certain cookies may affect website functionality. For more information, please refer to your browser's help documentation.
+                You can control and manage cookies through your browser settings. Most browsers allow you to refuse or delete cookies. However, disabling certain cookies may affect website functionality. For more information, please refer to your browser&apos;s help documentation.
               </p>
             </section>
 
@@ -183,7 +183,7 @@ export default function PrivacyPolicyPage() {
                 We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. We will notify you of any material changes by:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">
-                <li>Posting the updated policy on this page with a new "Last Updated" date</li>
+                <li>Posting the updated policy on this page with a new &quot;Last Updated&quot; date</li>
                 <li>Sending an email notification to registered users (if applicable)</li>
                 <li>Displaying a prominent notice on our website</li>
               </ul>

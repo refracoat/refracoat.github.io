@@ -1,6 +1,7 @@
 "use client";
 import Hero from "@/components/Hero";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { useState } from "react";
 import PageWrapper from "@/components/animations/PageWrapper";
 import SlideIn from "@/components/animations/SlideIn";
 import FadeIn from "@/components/animations/FadeIn";
@@ -22,10 +23,41 @@ type ContactFormData = {
 export default function ContactPage() {
     const { register, handleSubmit, formState: { errors } } = useForm<ContactFormData>();
 
-    const onSubmit: SubmitHandler<ContactFormData> = (data) => {
-        console.log(data);
-        // Placeholder for submission logic
-        alert("Thank you for your enquiry. We will contact you shortly.");
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitSuccess, setSubmitSuccess] = useState(false);
+    const [submitError, setSubmitError] = useState<string | null>(null);
+
+    const onSubmit: SubmitHandler<ContactFormData> = async (data) => {
+        setIsSubmitting(true);
+        setSubmitError(null);
+        setSubmitSuccess(false);
+
+        try {
+            // Note: File upload is not yet handled in this iteration
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
+            const { file, ...formData } = data;
+
+            const response = await fetch('/api/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.error || 'Failed to submit form');
+            }
+
+            setSubmitSuccess(true);
+            // reset(); // Optional: reset form after success
+        } catch (error) {
+            setSubmitError(error instanceof Error ? error.message : 'Something went wrong');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -254,24 +286,25 @@ export default function ContactPage() {
                                     {errors.message && <span className="text-red-500 text-xs mt-1 block">{errors.message.message}</span>}
                                 </div>
 
-                                <div>
-                                    <label htmlFor="file" className="block text-sm font-bold text-gray-700 mb-2">Specifications Upload</label>
-                                    <input
-                                        type="file"
-                                        id="file"
-                                        {...register("file")}
-                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors bg-white file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-gray-50 file:text-primary hover:file:bg-gray-100"
-                                    />
-                                    <span className="text-xs text-gray-500 mt-1 block">Optional. PDF, DOCX, or Images. Max 10MB.</span>
-                                </div>
+                                {submitSuccess && (
+                                    <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg mb-4">
+                                        Thank you! Your message has been sent successfully. We will get back to you shortly.
+                                    </div>
+                                )}
+                                {submitError && (
+                                    <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-4">
+                                        {submitError}
+                                    </div>
+                                )}
 
                                 <motion.button
-                                    whileHover={{ scale: 1.02 }}
-                                    whileTap={{ scale: 0.98 }}
+                                    whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
+                                    whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
                                     type="submit"
-                                    className="w-full bg-black text-white font-bold py-4 rounded-lg hover:bg-primary hover:text-black transition-colors uppercase tracking-wider text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"
+                                    disabled={isSubmitting}
+                                    className={`w-full font-bold py-4 rounded-lg transition-colors uppercase tracking-wider text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black ${isSubmitting ? 'bg-gray-400 text-gray-200 cursor-not-allowed' : 'bg-black text-white hover:bg-primary hover:text-black'}`}
                                 >
-                                    Send Message
+                                    {isSubmitting ? 'Sending...' : 'Send Message'}
                                 </motion.button>
                             </form>
                         </div>
