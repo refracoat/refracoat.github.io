@@ -27,10 +27,9 @@ concurrency:
 jobs:
   # Build job
   build:
+    environment: github-pages
     runs-on: ubuntu-latest
     steps:
-      - name: Echo vars
-        run: echo "RESEND_FROM_EMAIL=${{ vars.RESEND_FROM_EMAIL }}"
       - name: Checkout
         uses: actions/checkout@v4
       - name: Detect package manager
